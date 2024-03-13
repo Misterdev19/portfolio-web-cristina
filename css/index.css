@@ -1,9 +1,14 @@
+:root{
+    --font-primary: 'Work Sans', sans-serif;
+    --color-primary: #593735;
+}
+
 *{
  padding: 0;
  margin: 0;   
 }
 
-
+/**INDEX**/
 body{
     background-color:#f9f5f3 ;
 }
@@ -11,10 +16,33 @@ body{
 header {
     min-width:1000px;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     padding: 15px;
 }
-header  a{
+
+header .redes .redes-icon{
+    text-decoration: none;
+    font-family: var(--font-primary);
+    margin: 5px;
+    background-color:#854d49 ;
+    padding:5px 10px 5px 10px;
+    border-radius: 50px;
+    color: #f9f5f3;
+    font-size:12px;
+    transition: background-color 0.3s ease;
+}
+
+header .redes .redes-icon:hover{
+    background-color: #cfafa2;
+}
+
+
+header .redes .icon-redes i{
+    color: #f9f5f3;
+    vertical-align:auto;
+}
+
+header .menu a{
     text-decoration: none;
     font-family: "Work Sans", sans-serif;
     font-size: 14px;    
@@ -22,7 +50,7 @@ header  a{
     color:#2f1b1b;
     transition: color 0.3s ease;
 }
-header  a:hover{
+header  .menu a:hover{
    color: #e3cfc5;
 }
 
@@ -71,3 +99,5 @@ header  a:hover{
     font-size: 15px;
     color: #6e413e;
 }
+
+
