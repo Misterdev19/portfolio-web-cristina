@@ -1,6 +1,7 @@
 :root{
     --font-primary: 'Work Sans', sans-serif;
     --color-primary: #593735;
+    --color-title: #2f1b1b;
 }
 
 *{
@@ -8,7 +9,6 @@
  margin: 0;   
 }
 
-/**INDEX**/
 body{
     background-color:#f9f5f3 ;
 }
@@ -53,6 +53,9 @@ header .menu a{
 header  .menu a:hover{
    color: #e3cfc5;
 }
+/*
+esto son los estilos del la portada
+*/
 
 .contenedor-inicio{
     display: flex;
@@ -85,7 +88,7 @@ header  .menu a:hover{
 .description-inicio .description h1{
     font-weight: 300;
     font-size: 35px;
-    color:#2f1b1b;
+    color:var(--color-title);
 }
 .description-inicio .description h2{
     font-weight: 500;
@@ -99,5 +102,90 @@ header  .menu a:hover{
     font-size: 15px;
     color: #6e413e;
 }
+/*
+esto son los estilos del la linea de tiempo
+*/
+.contenedor-experiencias{
+     min-width: 1000px;
+}
+.contenedor-experiencias .titulo-experiencia{
+    padding-left: 30px;
+}
+
+.contenedor-experiencias .line-tiempo-experiencia .titulo-experiencia h1{
+    font-family: var(--font-primary);
+    color: var(--color-title);
+    font-weight: 300;
+    font-size: 25px;
+}
 
 
+.contenedor-experiencias .line-tiempo-experiencia{
+     display: flex;
+     flex-direction: column;
+     align-items: start;
+}
+
+
+.lineatemp{
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    }
+.fila{
+    display: flex;
+    justify-content: start;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+    font-family: var(--font-primary);
+    color: var(--color-primary);
+    font-weight: 500;
+    }
+.fila .disco{
+    width: 36px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    }
+.fila .disco:after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: calc(505 - 2px);
+    height: 100%;
+    width: 3px;
+    background: #854d49;
+    z-index: -1;
+    }
+.fila:first-child .disco:after{
+    height: 50%;
+    top: 50%;
+    }
+.fila:last-child .disco:after{
+    height: 50%;
+    }
+.fila .disco > div{
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background: #854d49;
+    box-sizing: border-box;
+    }
+.fila:hover .disco > div{
+    border: 3px solid var(--color-primary);
+    background: white;
+    }
+.fila div:nth-of-type(2){
+    width: 20%;
+    padding: 4px;
+    display: flex;
+    align-items:center;
+    }
+.fila div:nth-of-type(3){
+    width: 60%;
+    padding: 4px;
+    }
+    
